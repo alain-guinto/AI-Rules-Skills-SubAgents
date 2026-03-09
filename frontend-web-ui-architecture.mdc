@@ -1,0 +1,35 @@
+---
+description: Frontend Web UI architecture rules for SaaS apps
+globs: ["**/*.tsx", "**/*.jsx", "src/app/**/*.ts", "src/components/**/*.ts", "src/features/**/*.ts"]
+---
+
+# Frontend Web UI Architecture
+
+## Structure
+- Use feature-based organization.
+- Keep routes/pages thin; they should only compose UI and call feature logic.
+- Shared UI components live in `components/`.
+- Feature logic lives in `features/<feature>/`.
+
+## Components
+- Single responsibility per component.
+- Small, reusable, composable.
+- Shared UI patterns go to common components.
+
+## Business Logic
+- Do not place business logic inside pages/routes.
+- Business logic must live in services, hooks, or feature modules.
+- API calls must be isolated in services.
+
+## State
+- Local UI state stays in components.
+- Cross-feature state uses a store or context.
+
+## Performance
+- Avoid heavy computations inside render.
+- Lazy-load large components where possible.
+
+## Dependency & Deprecated Safety
+- Do not use deprecated components or APIs.
+- Prefer actively maintained libraries.
+- Update code if deprecated APIs exist.
