@@ -1,0 +1,31 @@
+---
+description: Testing rules for SaaS projects
+globs: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+---
+
+# Testing Rules
+
+## Coverage
+- Unit tests for core business logic, services, hooks, utilities.
+- Avoid testing implementation details.
+
+## Test Structure
+- Arrange → Act → Assert
+- One logical expectation per test if possible.
+
+## UI Testing
+- Focus on behavior and user interactions.
+- Do not test styling.
+
+## Memory Leak Prevention
+- Clean up event listeners, subscriptions, timers, intervals.
+- Hooks must return cleanup functions.
+- Long-running resources must be disposed.
+
+## Deprecated Components Detection
+- Tests must detect and avoid deprecated components/APIs.
+- Replace outdated code immediately.
+
+## Test Isolation
+- Use mocks for external APIs and databases.
+- Ensure deterministic tests.
