@@ -1,0 +1,30 @@
+---
+description: Frontend Mobile UI architecture rules
+globs: ["mobile/**/*.ts", "mobile/**/*.tsx", "app-mobile/**/*.ts", "app-mobile/**/*.tsx"]
+---
+
+# Mobile UI Architecture
+
+## Structure
+- Organize by feature modules.
+- Screens stay thin; delegate logic to hooks/services.
+- Shared UI elements live in a shared components folder.
+
+## Components
+- Reusable and platform-friendly.
+- Avoid large screen components; split into smaller UI blocks.
+
+## State
+- Local UI state in screens/components.
+- Shared app state uses a global store.
+
+## Data Fetching
+- API calls in services; screens should not fetch directly.
+
+## Performance & Maintainability
+- Minimize re-renders, lazy-load heavy screens.
+- Extract repeated UI into reusable components.
+
+## Deprecated Safety
+- Never introduce deprecated APIs or components.
+- Replace outdated code with recommended alternatives.
