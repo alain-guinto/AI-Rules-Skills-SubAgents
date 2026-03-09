@@ -1,0 +1,14 @@
+---
+description: General code health rules
+globs: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+---
+
+# Code Health Rules
+
+- Avoid memory leaks.
+- Avoid deprecated APIs/components.
+- Remove unused imports and dead code.
+- Follow best coding practices for maintainability.
+- Keep modules loosely coupled.
+- Optimize for readability and scalability.
+- Always review generated code before committing.
