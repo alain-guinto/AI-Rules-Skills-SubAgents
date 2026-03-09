@@ -1,0 +1,11 @@
+---
+description: Enforce frontend-backend architectural alignment
+globs: ["src/**/*.ts", "src/**/*.tsx", "backend/**/*.ts"]
+---
+
+# Architecture Guidelines
+
+- Frontend features correspond to backend domains where applicable.
+- API endpoints must map to domain services.
+- Keep pages thin; delegate logic to features/services.
+- Maintain clear separation between UI, business logic, and data access.
