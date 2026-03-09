@@ -1,0 +1,42 @@
+---
+description: Backend architecture rules using Domain-Driven Design (DDD) for SaaS applications
+globs: ["**/api/**/*.ts", "**/server/**/*.ts", "**/services/**/*.ts", "**/controllers/**/*.ts", "**/functions/**/*.ts"]
+---
+
+# Backend Architecture (DDD)
+
+## Domain Organization
+- Organize backend by domains: e.g., user, resume, billing.
+- Each domain encapsulates logic, models, and services.
+
+## Domain Structure
+Each domain may contain:
+- entities
+- value-objects
+- services
+- repositories
+- types/schemas
+
+## Controllers / API Layer
+- Handle request/response, validation.
+- Call domain services only.
+- No business logic in controllers.
+
+## Domain Services
+- Contain business rules.
+- Coordinate entities.
+- Remain independent and testable.
+
+## Data Access
+- Database access isolated in repositories.
+- Services call repositories; controllers never access DB directly.
+
+## Validation & Security
+- Validate all inputs.
+- Enforce auth checks.
+- Sanitize external inputs.
+
+## Scalability & Maintainability
+- Loose coupling between domains.
+- Domains evolve independently.
+- Replace deprecated APIs or libraries.
