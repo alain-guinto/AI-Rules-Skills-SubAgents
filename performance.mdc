@@ -1,0 +1,12 @@
+---
+description: Performance best practices
+globs: ["src/**/*.ts", "src/**/*.tsx"]
+---
+
+# Performance Rules
+
+- Lazy-load heavy components and modules.
+- Avoid unnecessary re-renders and computations inside render.
+- Optimize loops and data transformations.
+- Use memoization or caching where appropriate.
+- Minimize bundle size and dependencies.
